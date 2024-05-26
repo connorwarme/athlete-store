@@ -1,3 +1,25 @@
+import { capitalizeFirstLetter } from "@/app/_lib/utility";
+
+export const generateMetadata = ({ params }) => {
+  if (params.slug?.length === 2) {
+    const title = capitalizeFirstLetter(params.slug[1]);
+    return {
+      title: `${title}`,
+      description: `${title} product details`,
+    };
+  } else if (params.slug?.length === 1) {
+    const title = capitalizeFirstLetter(params.slug[0]);
+    return {
+      title: `${title}`,
+      description: `${title} category: list of all products`,
+    };
+  }
+  return {
+    title: "Categories",
+    description: "List of all categories",
+  };
+}
+
 export default function Categories({ params }) {
   // params.slug is an array of the slug parts
   if (params.slug?.length === 2) {
