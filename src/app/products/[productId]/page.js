@@ -1,3 +1,13 @@
+import { capitalizeFirstLetter } from "@/app/_lib/utility";
+
+export const generateMetadata = ({ params }) => {
+  const productId = capitalizeFirstLetter(params.productId);
+  return {
+    title: `${productId}`,
+    description: `${productId} product details`,
+  }
+}
+
 export default function ProductDetails({ params }) {
   // show product details
   // query the database for the product details, using params.productId
