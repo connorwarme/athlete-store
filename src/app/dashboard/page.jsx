@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Dashboard",
+  description: "Athlete dashboard - view order history, manage account, etc.",
+};
+
 export default function Page() {
   return (
     <div>
