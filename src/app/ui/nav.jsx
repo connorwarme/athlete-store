@@ -11,7 +11,7 @@ export default function Nav() {
           <Link href="/dashboard/orders">Orders</Link>
         </li>
         <li>
-          <Link href="/dashboard/products">Products</Link>
+          <Link href="/products">Products</Link>
         </li>
       </ul>
     </nav>

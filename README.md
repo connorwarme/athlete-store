@@ -10,6 +10,12 @@ Inspired by Amity's travails along the journey...
 - Postgres
 - TailwindCSS
 
+## Notes
+- in development
+- 
+
+## To Do
+
 ------------------------------------------------------------------
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
