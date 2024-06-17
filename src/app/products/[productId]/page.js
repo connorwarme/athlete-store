@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from "@/app/_lib/utility";
+import { capitalizeFirstLetter } from "../../_lib/utility";
 
 export const generateMetadata = ({ params }) => {
   const productId = capitalizeFirstLetter(params.productId);
