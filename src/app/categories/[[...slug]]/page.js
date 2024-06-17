@@ -20,11 +20,12 @@ export const generateMetadata = ({ params }) => {
     description: "List of all categories",
   };
 }
-const randomNumber = Math.floor(Math.random() * 10);
+const randomNumber = () => Math.floor(Math.random() * 10);
 
 export default function Categories({ params }) {
-  const random = randomNumber;
-  if (random < 2) {
+  const random = randomNumber();
+  console.log(random)
+  if (random < 3) {
     throw new Error("Random error in category");
   }
   // params.slug is an array of the slug parts
