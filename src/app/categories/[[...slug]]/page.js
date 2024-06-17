@@ -1,4 +1,5 @@
-import { capitalizeFirstLetter } from "@/app/_lib/utility";
+import Link from "next/link";
+import { capitalizeFirstLetter } from "../../_lib/utility";
 
 export const generateMetadata = ({ params }) => {
   if (params.slug?.length === 2) {
@@ -45,6 +46,9 @@ export default function Categories({ params }) {
   return (
     <div>
       <h1>Categories</h1>
+      <Link href="/categories/shirts">Shirts</Link>
+      <Link href="/categories/pants">Pants</Link>
+      <Link href="/categories/shoes">Shoes</Link>
     </div>
   );
 }
