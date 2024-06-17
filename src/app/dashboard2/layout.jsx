@@ -1,4 +1,8 @@
 const DashboardLayout = ({children, budget, orderHistory, cart }) => {
+  // could have each of these as a <Card> component, on their respective page.jsx
+  // which would let me give them the styling (and only have to write the code once)
+  // each folder could have a loading page, error page, etc.
+  
   return ( 
     <>
       <div>{children}</div>
