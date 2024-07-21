@@ -6,12 +6,12 @@ const DashboardLayout = ({children, budget, orderHistory, cart }) => {
   return ( 
     <>
       <div>{children}</div>
-      <div className="content flex">
-        <div className="flex flex-col">
-          <div>{budget}</div>
-          <div>{orderHistory}</div>
+      <div className="content flex gap-5 m-10">
+        <div className="flex flex-col gap-5">
+          <div className="border-red-500 border-2 p-4">{budget}</div>
+          <div className="border-green-500 border-2 p-4">{orderHistory}</div>
         </div>
-        <div>{cart}</div>
+        <div className="border-blue-500 border-2 p-4">{cart}</div>
       </div>
     </>
    );
