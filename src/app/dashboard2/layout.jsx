@@ -5,7 +5,7 @@ const DashboardLayout = ({ children, budget, orderHistory, cart, login }) => {
   // which would let me give them the styling (and only have to write the code once)
   // each folder could have a loading page, error page, etc.
 
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   // normally this would be a getUser function that checks if the user is logged in
   // and returns the user object if they are, or false if they are not
   // or a useAuth fn.. 

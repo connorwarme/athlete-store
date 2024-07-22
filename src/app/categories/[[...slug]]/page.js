@@ -25,6 +25,7 @@ const randomNumber = () => Math.floor(Math.random() * 10);
 export default function Categories({ params }) {
   const random = randomNumber();
   console.log(random)
+  // simulate an error to see error page
   if (random < 3) {
     throw new Error("Random error in category");
   }
@@ -35,8 +36,8 @@ export default function Categories({ params }) {
     // would need to query for product (details) and category (name only? url?)
     return (
       <div>
-        <h3>Category: {params.slug[0]}</h3>
-        <h3>Product: {params.slug[1]}</h3>
+        <h3>Category: {capitalizeFirstLetter(params.slug[0])}</h3>
+        <h3>Product: {capitalizeFirstLetter(params.slug[1])}</h3>
       </div>
     )
   } else if (params.slug?.length === 1) {
@@ -44,7 +45,7 @@ export default function Categories({ params }) {
     // need to query for items in that category
     return (
       <div>
-        <h3>Category: {params.slug[0]}</h3>
+        <h3>Category: {capitalizeFirstLetter(params.slug[0])}</h3>
       </div>
     )
   }
