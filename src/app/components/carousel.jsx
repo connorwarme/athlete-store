@@ -15,14 +15,21 @@ const Carousel = ({ items }) => {
     return setSelected(prevSelected => prevSelected === items.length - 1 ? 0 : prevSelected + 1);
   }
 
+  const btnStyle = 'absolute top-1/4 p-4'
   return ( 
     <>
-    <div className='flex gap-4 m-4'>
-      <button onClick={handleBack}>&lt;</button>
-      <div className="flex gap-4">
-        <Card style="border-yellow-500">{items[selected].name}</Card>
+    <div className='m-4 h-24 w-48 relative'>
+      <div className="flex gap-4 h-full w-full overflow-hidden">
+        { items.map((item, index) => {
+          const style = `border-yellow-500 translate-[${-100 * selected}%]`;  
+          return (
+            <Card key={index} style={style}>{item.name}</Card>
+          )}
+          )}
       </div>
-      <button onClick={handleForward}>&gt;</button>
+      
+      <button onClick={handleBack} className={btnStyle + ' left-0'}>&lt;</button>
+      <button onClick={handleForward} className={btnStyle + ' right-0'}>&gt;</button>
     </div>
 
     </>
