@@ -20,16 +20,7 @@ const Carousel = ({ items }) => {
     <div className='flex gap-4 m-4'>
       <button onClick={handleBack}>&lt;</button>
       <div className="flex gap-4">
-        {items.map((item, index) => {
-          const style = "border-yellow-500";
-          return (
-            <Card key={index} style={style}>
-              <Link href={item.href}>
-                <h1>{item.name}</h1>
-              </Link>
-            </Card>
-          )
-        })}
+        <Card style="border-yellow-500">{items[selected].name}</Card>
       </div>
       <button onClick={handleForward}>&gt;</button>
     </div>
