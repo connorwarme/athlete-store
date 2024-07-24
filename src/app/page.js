@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import Link from 'next/link';
 import Carousel from './components/carousel';
+import CarouselPhoto from './components/carouselPhoto';
 
 export default function Home() {
   // home page
@@ -65,6 +66,7 @@ export default function Home() {
         <Link href="/categories">Categories</Link>
         <Carousel items={fakeCategories} />
       </div>
+      <CarouselPhoto />
       <Link href="/products">Products</Link>
     </main>
   );
