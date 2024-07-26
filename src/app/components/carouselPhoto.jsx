@@ -18,13 +18,18 @@ const CarouselPhoto = () => {
     return setImageIndex(prevIndex => prevIndex === images.length - 1 ? 0 : prevIndex + 1);
   }
 
-  const buttonStyle = 'block absolute top-0 bottom-0 p-4 text-lg font-bold text-white bg-black bg-opacity-0 hover:bg-opacity-25 transition-all duration-100 ease-in-out';
+  const buttonDivStyle = 'flex absolute top-0 bottom-0 p-4 bg-black bg-opacity-0 hover:bg-opacity-25 transition-all duration-100 ease-in-out group';
+  const buttonStyle = 'self-center px-4 text-lg font-bold text-white group-hover:animate-bounce';
   return (
     <div className='max-w-[1200px] w-full aspect-[10/6] my-auto mx-0'>
       <div className='w-full h-full relative'>
         <img src={images[imageIndex]} alt='carousel' className='w-full h-full object-cover block' />
-        <button onClick={handleForward} className={buttonStyle + ' right-0'}>&gt;</button>
-        <button onClick={handleBack} className={buttonStyle + ' left-0'}>&lt;</button>
+        <div className={buttonDivStyle + ' right-0'}>
+          <button onClick={handleForward} className={buttonStyle}>&gt;</button>
+        </div>
+        <div className={buttonDivStyle + ' left-0'}>
+          <button onClick={handleBack} className={buttonStyle}>&lt;</button>
+        </div>
       </div>
     </div>
   )
