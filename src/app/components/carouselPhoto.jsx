@@ -35,7 +35,7 @@ const CarouselPhoto = () => {
   const imgStyle =
     "w-full h-full object-cover block grow-0 shrink-0 transition-all duration-300 ease-in-out";
   return (
-    <section className="max-w-[1200px] w-full aspect-[10/6] my-auto mx-0" aria-label="Image Slider">
+    <section className="max-w-[1200px] w-full aspect-[10/6] my-auto mx-0 relative" aria-label="Image Slider">
       <a href="#skip-image-slider" className="absolute h-[1px] w-[1px] p-0 -m-[1px] overflow-hidden border-0 focus-visible:block focus-visible:top-1/2 focus-visible:left-0 focus-visible:m-0 focus-visible:h-auto focus-visible:w-auto focus-visible:p-4 focus-visible:border-1 focus-visible:bg-white focus-visible:text-black focus-visible:z-10" style={{"clip-path": "rect(0 0 0 0)"}}>Skip Image Slider Controls</a>
       <div className="w-full h-full relative overflow-hidden flex">
         {images.map((img, index) => (
@@ -57,7 +57,7 @@ const CarouselPhoto = () => {
           </span>
         </button>
       </div>
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-1">
         {images.map((_, index) => (
           <button
             key={index}
